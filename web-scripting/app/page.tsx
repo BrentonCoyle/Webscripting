@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Clock from "../components/Clock";
 
 export default function Home() {
-
+  // make vars for updateing and setting of time with Date
   const [time, setTime] = useState<string>(new Date().toLocaleTimeString());
 
   const updateTime = () => {
@@ -21,8 +21,8 @@ export default function Home() {
       <Header />
 
       <main>
-  
-        <div style={{ padding: "30px", display: "flex", gap: "20px" }}>
+        
+        <div style={{ padding: "30px", display: "flex", gap: "20px" }}> 
             <Button label="Update Time" color="green" onClick={updateTime} />
         </div>
 

@@ -8,45 +8,45 @@ html, body {
 }
 
 body {
-  display: flex;
+  display: flex; /*flex nice*/
   flex-direction: column;
   min-height: 100vh;
 }
 
 main {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /*make it flex box for easy desing and looks*/
+  justify-content: center; /*center everything in  main */
+  align-items: center; /*center everything*/
 }
 
 header, footer {
-  text-align: center;
+  text-align: center; /*Align Text to center of screen*/
   width: 100%;
 }
 
 header {
-  padding: 20px;
+  padding: 20px; /*Padding to make not as cramped*/
   background-color: #1f1f1f; /* Slightly lighter dark background */
   color: #f5f5f5; /* Lighter text for the header */
 }
 
 footer {
-  padding: 10px;
+  padding: 10px; /*Padding to make not as cramped*/
   background-color: #1f1f1f; /* Same as header background */
   color: #f5f5f5; /* Light footer text */
   margin-top: auto;
 }
 
 button {
-  padding: 12px 20px;
+  padding: 12px 20px; /*Padding to make not as cramped*/
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: pointer; /*Make sure the cursor is the pointer for button*/
   font-size: 16px;
   color: #e0e0e0;
   background-color: #333; /* Dark button background */
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /*Make button change color... DOES NOT WORK*/
 }
 
 button:hover {
@@ -54,6 +54,6 @@ button:hover {
 }
 
 button:focus {
-  outline: none;
+  outline: none; /*Removed Outline for slicker look*/
   border: 2px solid #888;
 }

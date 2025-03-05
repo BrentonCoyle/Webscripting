@@ -11,7 +11,9 @@ type ButtonProps = {
 
 export default function Button({ label, color, onClick }: ButtonProps) {
   return (
+    // Button Start
     <button
+      // Update styles on button
       style={{
         backgroundColor: color,
         color: "#fff",
@@ -24,5 +26,6 @@ export default function Button({ label, color, onClick }: ButtonProps) {
     >
       {label}
     </button>
+    // Button End
   );
 }
