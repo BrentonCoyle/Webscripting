@@ -1,42 +1,30 @@
-'use client'; 
+'use client';
 
 import { useState } from 'react';
-
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Clock from "../components/Clock";
+import ToDo from "../components/ToDoList";
 
 export default function Home() {
-  // make vars for updateing and setting of time with Date
   const [time, setTime] = useState<string>(new Date().toLocaleTimeString());
 
   const updateTime = () => {
-    setTime(new Date().toLocaleTimeString());  // Update the time
+    setTime(new Date().toLocaleTimeString()); // Update the time
   };
 
   return (
-    <div>
-
+    <div style={{ textAlign: "center", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Header />
 
-      <main>
-        
-        <div style={{ padding: "30px", display: "flex", gap: "20px" }}> 
-            <Button label="Update Time" color="green" onClick={updateTime} />
-        </div>
-
-        <br></br>
-
-        <div>
-          <Clock color="blue" time={time} />
-        </div>
-        
+      <main style={{ padding: "30px", display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
+        <Button label="Update Time" color="green" onClick={updateTime} />
+        <Clock color="blue" time={time} />
+        <ToDo />
       </main>
 
-      
       <Footer />
-    
     </div>
   );
 }
