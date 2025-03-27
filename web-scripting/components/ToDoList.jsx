@@ -66,7 +66,7 @@ function ToDoList()
 
             <ol>
                 {task.map((task, index) => 
-                    <li key={index}>
+                    <li className="to-do-box" key={index}>
                         <span className="text">{task}</span>
                         <button className="delete-button"
                         onClick={() => deleteTask(index)}

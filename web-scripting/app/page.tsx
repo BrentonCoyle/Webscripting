@@ -6,25 +6,35 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Clock from "../components/Clock";
 import ToDo from "../components/ToDoList";
+import Link from 'next/link';
+
 
 export default function Home() {
-  const [time, setTime] = useState<string>(new Date().toLocaleTimeString());
-
-  const updateTime = () => {
-    setTime(new Date().toLocaleTimeString()); // Update the time
-  };
+  
 
   return (
-    <div style={{ textAlign: "center", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div>
       <Header />
+      
+      <ul className="navbar">
+          
+          <li className="nav-list">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="nav-list">
+            <Link href="/clock">Clock</Link>
+          </li>
+          <li className="nav-list">
+            <Link href="/clock/todo">Todo List</Link>
+          </li>
+      </ul>
 
-      <main style={{ padding: "30px", display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
-        <Button label="Update Time" color="green" onClick={updateTime} />
-        <Clock color="blue" time={time} />
-        <ToDo />
-      </main>
+      <h2>This is Brenton Coyle's React Website For Webscripting</h2>
+      <h3>The Diffrent Links Will Take You To Diffrent Stuff He Has Made</h3>
 
       <Footer />
     </div>
+
+   
   );
 }
