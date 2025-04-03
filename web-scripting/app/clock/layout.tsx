@@ -18,6 +18,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <li className="nav-list">
           <Link href="/clock/todo">Todo List</Link>
         </li>
+
+        <li className="nav-list">
+          <Link href="/clock/todo/api">API</Link>
+        </li>
         
         
       </ul>

@@ -27,6 +27,9 @@ export default function Home() {
           <li className="nav-list">
             <Link href="/clock/todo">Todo List</Link>
           </li>
+          <li className="nav-list">
+          <Link href="/clock/todo/api">API</Link>
+        </li>
       </ul>
 
       <h2>This is Brenton Coyle's React Website For Webscripting</h2>
